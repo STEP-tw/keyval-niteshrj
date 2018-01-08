@@ -8,8 +8,11 @@ const contains=function(list,key) {
   });
 }
 
-var StrictParseInfo=function(initialParsingFunction,validKeys) {
+var StrictParseInfo=function(initialParsingFunction,validKeys,isCaseSensitive) {
   ParseInfo.call(this,initialParsingFunction);
+  if(!isCaseSensitive){
+    validKeys[0]=validKeys[0].toUpperCase();
+  }
   this.validKeys=validKeys;
 }
 
