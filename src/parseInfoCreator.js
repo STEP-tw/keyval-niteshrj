@@ -7,7 +7,7 @@ const basic=function(initialParsingFunction) {
 
 const strict=function(listOfKeys,isCaseSensitive) {
   return function(initialParsingFunction) {
-    return new StrictParseInfo(initialParsingFunction,listOfKeys);
+    return new StrictParseInfo(initialParsingFunction,listOfKeys,isCaseSensitive);
   }
 }
 module.exports = {

@@ -1,7 +1,6 @@
 const src=function(filePath){return "../src/"+filePath};
 
-// const assert=require('chai').assert;
-const assert = require('assert');
+const assert=require('chai').assert;
 const Parsed=require(src('parsed.js'));
 const StrictParser=require(src('index.js')).StrictParser;
 
@@ -13,9 +12,6 @@ describe("strict parser that is case insensitive",function(){
     expected["NAME"]="jayanth";
     let parsed=kvParser.parse("NAME=jayanth");
     assert.deepEqual(parsed,expected);
-  });
-  it("should parse when keys are upper case and so is actual",function(){
-
   });
 });
 describe("strict parser that is case sensitive",function(){
