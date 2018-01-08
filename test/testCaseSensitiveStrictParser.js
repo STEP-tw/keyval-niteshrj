@@ -14,14 +14,7 @@ describe("strict parser that is case insensitive",function(){
     let parsed=kvParser.parse("NAME=jayanth");
     assert.deepEqual(parsed,expected);
   });
-});
+  it("should parse when keys are upper case and so is actual",function(){
 
-describe("strict parser that is case sensitive",function(){
-  it("should throw error when specified keys are in lower case and actual is not",function(){
-    let kvParser=new StrictParser(["name"],true);
-    // true indicates that parser is case sensitive
-    assert.throws(()=>{
-      kvParser.parse("NAME=jayanth");
-    })
   });
 });
