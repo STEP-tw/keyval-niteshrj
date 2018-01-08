@@ -16,6 +16,9 @@ describe("parse basic key values",function(){
   beforeEach(function(){
     kvParser=new Parser();
   });
+  it("checking test"){
+    assert.deepEqual({ tea: 'green' }, { tea: 'green' });
+  });
 
   it("parses an empty string",function(){
     let actual=kvParser.parse("");
